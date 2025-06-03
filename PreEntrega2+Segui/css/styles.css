@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #1a1a1a;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: 150px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #e10600;
+  color: #fff;
+}
+
+.search-form input[type="search"] {
+  padding: 6px 12px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.social-media {
+  background-color: #1a1a1a; 
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  box-shadow: inset 0 0 10px rgba(225, 0, 0, 0.7);
+}
+
+.social-media a img {
+  width: 40px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.social-media a:hover img {
+  filter: none;
+  transform: scale(1.2);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.latest-news, .band-merch {
+  background-color: #fcf8f8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.latest-news h2, .band-merch h2 {
+  margin-bottom: 15px;
+  color: #e10600;
+}
+
+.latest-news ul {
+  list-style: inside disc;
+}
+
+.band-merch p {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.band-merch img {
+  width: 150px;
+  margin-right: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.band-merch img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #1a1a1a;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+body.index {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.index .container {
+  flex-grow: 1;
+  background-color: transparent; 
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+body.index header {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 20px;
+}
+
+body.index nav a:hover,
+body.index nav a.active {
+  background-color: #e10600;
+  color: #fff;
+}
+
+body.index .search-form input[type="search"] {
+  background-color: #222;
+  color: #eee;
+  transition: background-color 0.3s ease;
+  padding: 6px 12px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+body.index .search-form input[type="search"]::placeholder {
+  color: #bbb;
+}
+
+body.index .search-form input[type="search"]:focus {
+  background-color: #333;
+}
+
+body.index .slider-dots {
+  background-color: #1a1a1a;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+body.index .slider-dots div {
+  width: 40px;
+  height: 40px;
+  background-color: #b9b9b9;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.index .slider-dots div:hover {
+  background-color: #e10600;
+}
+
+body.index main {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 25px;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+body.index .latest-news,
+body.index .band-merch {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(225, 0, 0, 0.5);
+  color: #f0f0f0;
+}
+
+body.index .latest-news h2,
+body.index .band-merch h2 {
+  margin-bottom: 15px;
+  color: #e10600;
+  border-bottom: 2px solid #e10600;
+  padding-bottom: 5px;
+}
+
+body.index .latest-news ul {
+  list-style: inside disc;
+  padding-left: 10px;
+  color: #ddd;
+}
+
+body.index .latest-news ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+body.index .latest-news ul li a:hover {
+  color: #e10600;
+}
+
+body.index .band-merch p {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+body.index .band-merch img {
+  width: 150px;
+  margin-right: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(225,0,0,0.5);
+}
+
+body.index .band-merch img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #e10600;
+}
+
+body.index footer {
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.1);
+}
+
+body.merch .merch-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 480px; 
+  gap: 15px;
+}
+
+body.merch .merch-gallery img {
+  width: 150px;
+  margin-right: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px rgba(225,0,0,0.5);
+  flex-shrink: 0;
+}
+
+body.merch .merch-gallery img:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+body.merch .merch-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #e10600;
+}
+
+@media (max-width: 768px) {
+  body.merch .merch-gallery {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    height: auto;
+  }
+  body.merch .merch-gallery img {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .band-merch img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .social-media {
+    gap: 15px;
+  }
+
+  html, body {
+    background-color: #121212;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  header,
+  .social-media,
+  footer {
+    width: 100%;
+  }
+
+  body.index {
+    margin: 0;
+    padding: 0;
+  }
+}
